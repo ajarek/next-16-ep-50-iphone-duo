@@ -39,7 +39,7 @@ export default function Navbar() {
   }, [mobileMenuOpen]);
 
   const navLinks = [
-    { label: "Przegląd", href: "#przeglad" },
+    { label: "Opis", href: "/opis" },
     { label: "Wyświetlacz", href: "#wyswietlacz" },
     { label: "A20 Pro", href: "#wydajnosc" },
     { label: "Aparat", href: "#aparat" },
