@@ -41,9 +41,8 @@ export default function Navbar() {
   const navLinks = [
     { label: "Opis", href: "/opis" },
     { label: "Wyświetlacz", href: "/display" },
-    { label: "A20 Pro", href: "#wydajnosc" },
-    { label: "Aparat", href: "#aparat" },
-    { label: "Specyfikacja", href: "#specyfikacja" },
+    { label: "Aparat", href: "/camera" },
+    { label: "Specyfikacja", href: "/specyfikacja" },
   ];
 
   return (

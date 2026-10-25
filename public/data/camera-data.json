@@ -1,0 +1,70 @@
+{
+  "title": "System aparatów Dual Fusion 48 MP",
+  "subtitle": "Zdjęcia i filmy bez trzymanki w iPhonie Duo",
+  "specs": [
+    {
+      "id": "fusion-main",
+      "name": "Aparat główny Fusion",
+      "megapixels": "48 MP",
+      "sensor": "Quad-Pixel 2.44 µm (24 MP i 48 MP)",
+      "aperture": "f/1.6",
+      "focalLength": "24 mm (opcje 28 mm, 35 mm, 2x 48 mm)",
+      "stabilization": "Sensor-shift OIS 2. generacji",
+      "features": ["100% Focus Pixels", "Deep Fusion", "Photonic Engine", "Zero Shutter Lag", "Apple ProRAW"]
+    },
+    {
+      "id": "fusion-ultra",
+      "name": "Aparat ultraszerokokątny Fusion",
+      "megapixels": "48 MP",
+      "sensor": "Quad-Pixel z mikrosoczewkami 1.4 µm",
+      "aperture": "f/2.2",
+      "focalLength": "13 mm (pole widzenia 120°)",
+      "stabilization": "Elektroniczna stabilizacja z korekcją obiektywu",
+      "features": ["Fotografia makro od 2 cm", "100% Focus Pixels", "Korekta dystorsji krawędziowej", "HDR 5 nowej generacji"]
+    },
+    {
+      "id": "facetime-udc",
+      "name": "Aparat TrueDepth pod ekranem (UDC)",
+      "megapixels": "12 MP",
+      "sensor": "Matryca subpikselowa pod matrycą OLED",
+      "aperture": "f/1.9",
+      "focalLength": "23 mm",
+      "stabilization": "Cyfrowa stabilizacja wideo Cinematic",
+      "features": ["Center Stage", "Niewidoczny obiektyw bez wycięcia", "Face ID pod ekranem", "Duo FaceTime dual-stream"]
+    }
+  ],
+  "duoFeatures": [
+    {
+      "id": "duo-preview",
+      "title": "Duo Preview",
+      "badge": "Rewolucja w pozowaniu",
+      "tagline": "Pozujesz z pełną kontrolą na ekranie zewnętrznym",
+      "description": "Gdy rozłożysz iPhone Duo i skierujesz aparat na kogoś, zewnętrzny ekran 5,4 cala natychmiast staje się cyfrowym lustrem. Osoba fotografowana widzi swój kadr, mimikę i ułożenie sylwetki w czasie rzeczywistym.",
+      "metrics": "5,4″ podgląd na żywo"
+    },
+    {
+      "id": "flexcam",
+      "title": "Zdjęcia bez trzymanki (FlexCam)",
+      "badge": "Wbudowany statyw",
+      "tagline": "Kąt od 45° do 135° na dowolnym podłożu",
+      "description": "Zapomnij o statywach i opieraniu telefonu o kubek. Zegnij obudowę iPhone Duo pod kątem prostym i postaw go na stole, murku lub skale. Wizjer przeniesie się na górną połówkę, a dolna stanie się panelem kontrolnym.",
+      "metrics": "0 drgań • 100% stabilności"
+    },
+    {
+      "id": "kids-attention",
+      "title": "Animacja dla dziecka",
+      "badge": "Uśmiech w kadrze",
+      "tagline": "Zewnętrzny ekran hipnotyzuje małych modeli",
+      "description": "Fotografowanie maluchów nigdy nie było prostsze. Włącz tryb Animacji dla dziecka, a ekran zewnętrzny wyświetli sympatyczne, wesołe postacie reagujące na ruch i dźwięki, kierując spojrzenie dziecka prosto w obiektyw.",
+      "metrics": "98% trafionych spojrzeń"
+    },
+    {
+      "id": "video-4k-120",
+      "title": "Wideo 4K przy 120 kl./s",
+      "badge": "Hollywood w kieszeni",
+      "tagline": "Dolby Vision i kinowe zwolnione tempo",
+      "description": "Rejestruj płynny ruch 4K w 120 klatkach na sekundę w formacie Dolby Vision lub profilu Log. Po nagraniu jednym suwakiem w aplikacji Zdjęcia zmienisz tempo na 60, 30 lub filmowe 24 kl./s.",
+      "metrics": "4K 120 kl./s • 10-bit Log"
+    }
+  ]
+}
