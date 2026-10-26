@@ -1,0 +1,513 @@
+{
+  "device": {
+    "name": "iPhone Duo",
+    "tagline": "Potęga w każdym milimetrze. Wszystko w najdrobniejszym szczególe.",
+    "image": "/images/specyfikacja.png",
+    "imageWidth": 677,
+    "imageHeight": 369
+  },
+  "quickPillars": [
+    {
+      "id": "displays",
+      "value": "7,6″ / 5,4″",
+      "label": "Dwa ekrany OLED",
+      "detail": "Super Retina XDR • 1–120 Hz ProMotion • Do 3000 nitów"
+    },
+    {
+      "id": "chip",
+      "value": "A20 Pro",
+      "label": "Architektura 2 nm",
+      "detail": "6-rdzeniowy CPU • 7-rdzeniowy GPU • Ray Tracing"
+    },
+    {
+      "id": "camera",
+      "value": "48 MP",
+      "label": "Dual Fusion & Makro",
+      "detail": "Wideo 4K 120 kl./s Dolby Vision • Duo Preview"
+    },
+    {
+      "id": "battery",
+      "value": "Do 44 godz.",
+      "label": "Bateria podwójna",
+      "detail": "USB-C 60 W (50% w 20 min) • MagSafe 25 W"
+    },
+    {
+      "id": "chassis",
+      "value": "5,2 mm",
+      "label": "Tytan & IP68",
+      "detail": "Ceramic Shield 2 • Wodoszczelność do 6 m"
+    }
+  ],
+  "finishes": [
+    {
+      "id": "night-sky",
+      "name": "Nocne niebo",
+      "enName": "Night Sky",
+      "colorHex": "#0b1120",
+      "description": "Głęboka, aksamitna czerń tytanowej ramy z powłoką PVD o wysokiej twardości."
+    },
+    {
+      "id": "starlight-white",
+      "name": "Gwiezdna biel",
+      "enName": "Starlight White",
+      "colorHex": "#e2e8f0",
+      "description": "Lśniący tytan o perłowym odcieniu z matowym tyłem Ceramic Shield."
+    }
+  ],
+  "capacities": [
+    {
+      "id": "256gb",
+      "size": "256 GB",
+      "approxPhotos": "ok. 25 000 zdjęć 24 MP",
+      "approxVideo": "ok. 6 godz. wideo 4K 120 fps",
+      "recommended": "Standardowa pojemność na codzienne pliki i aplikacje"
+    },
+    {
+      "id": "512gb",
+      "size": "512 GB",
+      "approxPhotos": "ok. 50 000 zdjęć 24 MP",
+      "approxVideo": "ok. 13 godz. wideo 4K 120 fps",
+      "recommended": "Idealna dla miłośników fotografii i wideo 4K"
+    },
+    {
+      "id": "1tb",
+      "size": "1 TB",
+      "approxPhotos": "ok. 100 000 zdjęć 48 MP",
+      "approxVideo": "ok. 26 godz. wideo 4K 120 fps",
+      "recommended": "Dla profesjonalistów montujących Apple ProRes i Log"
+    },
+    {
+      "id": "2tb",
+      "size": "2 TB",
+      "approxPhotos": "ok. 200 000 zdjęć 48 MP",
+      "approxVideo": "ok. 52 godz. wideo 4K 120 fps",
+      "recommended": "Maksymalna swoboda twórcza bez kompromisów"
+    }
+  ],
+  "dimensions": {
+    "open": {
+      "state": "Otwarty",
+      "width": "164,6 mm",
+      "height": "117,8 mm",
+      "thickness": "5,2 mm",
+      "weight": "254 g",
+      "screenDiagonal": "7,6 cala (19,3 cm)",
+      "badge": "Najsmuklejszy profil w klasie"
+    },
+    "closed": {
+      "state": "Zamknięty",
+      "width": "84,1 mm",
+      "height": "117,8 mm",
+      "thickness": "11,3 mm",
+      "weight": "254 g",
+      "screenDiagonal": "5,4 cala (13,7 cm)",
+      "badge": "Wygodna obsługa jedną dłonią"
+    }
+  },
+  "sections": [
+    {
+      "id": "wykonczenie",
+      "title": "Wykończenie i materiały",
+      "category": "design",
+      "icon": "Shield",
+      "summary": "Tytan klasy 5, podwójna warstwa Ceramic Shield i certyfikat odporności IP68.",
+      "items": [
+        {
+          "name": "Dostępne kolory",
+          "value": "Nocne niebo, Gwiezdna biel",
+          "details": "Wykończenie tytanu metodą PVD z mikropiaskowaną fakturą bocznych krawędzi."
+        },
+        {
+          "name": "Konstrukcja obudowy",
+          "value": "Składana konstrukcja z tytanu klasy 5",
+          "details": "Lekki i wytrzymały stop stosowany w przemyśle lotniczym, połączony z precyzyjnym zawiasem z ponad 100 elementów."
+        },
+        {
+          "name": "Ochrona ekranu przedniego",
+          "value": "Warstwa Ceramic Shield 2 z przodu",
+          "details": "Aż 3-krotnie większa odporność na zarysowania w porównaniu ze standardowym szkłem smartfonowym."
+        },
+        {
+          "name": "Ochrona tyłu obudowy",
+          "value": "Warstwa Ceramic Shield z tyłu",
+          "details": "Wyjątkowa gładkość i odporność na uderzenia oraz codzienne zużycie."
+        },
+        {
+          "name": "Odporność na wodę i pył",
+          "value": "Klasa IP68 (norma IEC 60529)",
+          "details": "Maksymalna głębokość do 6 metrów przez maksymalnie 30 minut. Odporność na zachlapania kawą, herbatą i sokami."
+        }
+      ]
+    },
+    {
+      "id": "wyswietlacze",
+      "title": "Wyświetlacze Super Retina XDR",
+      "category": "display",
+      "icon": "Tv",
+      "summary": "Dwa panele OLED z technologią ProMotion 120 Hz, nanostrukturą i jasnością do 3000 nitów.",
+      "items": [
+        {
+          "name": "Wyświetlacz wewnętrzny",
+          "value": "7,6 cala Super Retina XDR OLED",
+          "details": "Składany, sięgający krawędzi panel OLED o rozdzielczości 1878 na 2670 pikseli przy 430 pikselach na cal. Wykończenie nanostrukturalne redukujące odblaski. Szerokokątny panel OLED z 10 ultracienkimi warstwami."
+        },
+        {
+          "name": "Wyświetlacz zewnętrzny",
+          "value": "5,4 cala Super Retina XDR OLED",
+          "details": "Sięgający krawędzi wyświetlacz OLED o rozdzielczości 1398 na 2034 piksele przy 460 pikselach na cal."
+        },
+        {
+          "name": "Wspólne technologie obu ekranów",
+          "value": "Dynamic Island, Niegasnący wyświetlacz (Always-On), ProMotion do 120 Hz",
+          "details": "Adaptacyjna częstotliwość odświeżania od 1 Hz do 120 Hz dostosowująca się do wyświetlanej treści i ruchów dłoni."
+        },
+        {
+          "name": "Kolory i kontrast",
+          "value": "HDR, True Tone, Szeroka gama kolorów (P3), Haptic Touch",
+          "details": "Kontrast 2 000 000:1 (typowo) zapewniający perfekcyjną czerń i nasycenie kolorów."
+        },
+        {
+          "name": "Poziomy jasności",
+          "value": "1000 nitów (typowo) • 1600 nitów (HDR) • 3000 nitów (w plenerze)",
+          "details": "Minimalna jasność 1 nit umożliwia komfortowe czytanie w całkowitym mroku bez męczenia wzroku."
+        },
+        {
+          "name": "Powłoki ochronne",
+          "value": "Oleofobowa odporna na odciski palców oraz powłoka antyodblaskowa",
+          "details": "Jednoczesne wyświetlanie informacji w wielu językach i zestawach znaków."
+        },
+        {
+          "name": "Obsługa Apple Pencil",
+          "value": "Działa z Apple Pencil (USB‑C)",
+          "details": "Precyzyjne szkicowanie, notowanie i adnotacje na 7,6-calowym ekranie roboczym."
+        },
+        {
+          "name": "Uwagi dotyczące geometrii",
+          "value": "Zaokrąglone rogi dopasowane do opływowych linii obudowy",
+          "details": "Przy założeniu prostokątnej powierzchni przekątne wynoszą 7,58 cala oraz 5,36 cala (faktyczny obszar jest nieco mniejszy)."
+        }
+      ]
+    },
+    {
+      "id": "procesor",
+      "title": "Czip i Apple Intelligence",
+      "category": "performance",
+      "icon": "Cpu",
+      "summary": "Procesor A20 Pro nowej generacji z akceleracją Ray Tracingu i podwójnym Neural Engine.",
+      "items": [
+        {
+          "name": "Układ główny",
+          "value": "Czip A20 Pro",
+          "details": "Wykonany w przełomowej litografii 2 nm o niespotykanej dotąd efektywności energetycznej."
+        },
+        {
+          "name": "Jednostka centralna (CPU)",
+          "value": "6‑rdzeniowe CPU (2 super rdzenie wydajnościowe + 4 energooszczędne)",
+          "details": "Błyskawiczne uruchamianie aplikacji i wielozadaniowość Split View bez spadku płynności."
+        },
+        {
+          "name": "Układ graficzny (GPU)",
+          "value": "7‑rdzeniowe GPU z akceleratorami Neural Accelerator",
+          "details": "Sprzętowa akceleracja ray tracingu z cieniowaniem siatkowym dla gier klasy konsolowej."
+        },
+        {
+          "name": "Sztuczna inteligencja",
+          "value": "Podwójny 16‑rdzeniowy system Neural Engine",
+          "details": "Wykonywanie zadań uczenia maszynowego bezpośrednio na urządzeniu w ułamkach sekund."
+        },
+        {
+          "name": "Apple Intelligence",
+          "value": "Prywatna inteligencja zintegrowana z iOS",
+          "details": "Pozwala wyrażać siebie, redagować teksty, przeszukiwać zdjęcia i ogarniać wszystko bez wysiłku. Nikt poza Tobą – nawet Apple – nie ma dostępu do Twoich danych."
+        }
+      ]
+    },
+    {
+      "id": "aparat-glowny",
+      "title": "System dwóch aparatów Fusion 48 MP",
+      "category": "camera",
+      "icon": "Camera",
+      "summary": "Dwa obiektywy 48 MP z matrycową stabilizacją obrazu Sensor-shift i podglądem Duo Preview.",
+      "items": [
+        {
+          "name": "Aparat główny Fusion 48 MP",
+          "value": "26 mm, przysłona ƒ/1,6, system OIS ze stabilizacją matrycy",
+          "details": "Hybrydowe Focus Pixels, zdjęcia o ultrawysokiej rozdzielczości (24 MP i 48 MP). Osłona ze szkła szafirowego."
+        },
+        {
+          "name": "Tryb 2x zoom optyczny 12 MP",
+          "value": "52 mm, przysłona ƒ/1,6, system OIS z automatyczną stabilizacją matrycy",
+          "details": "Jakość optyczna realizowana przez centralny wycinek matrycy Quad-Pixel bez straty ostrości."
+        },
+        {
+          "name": "Aparat ultraszerokokątny Fusion 48 MP",
+          "value": "13 mm, przysłona ƒ/2,2, pole widzenia 120°",
+          "details": "Hybrydowe Focus Pixels, zdjęcia 24 MP i 48 MP, zaawansowana fotografia makro 48 MP od 2 cm."
+        },
+        {
+          "name": "Zakres zoomu",
+          "value": "2x optyczny (przybliżanie) • 2x optyczny (oddalanie) • 4x jakość optyczna (pełny zakres)",
+          "details": "Maksymalnie 10x płynny zoom cyfrowy z zaawansowanym algorytmem rekonstrukcji detali."
+        },
+        {
+          "name": "Innowacyjne funkcje fotograficzne",
+          "value": "Inteligentna migawka Duo Preview, Style fotograficzne 3, FlexCam",
+          "details": "Duo Preview wyświetla kadr na ekranie zewnętrznym osobie fotografowanej. Inteligentne śledzenie ostrości i wybór domyślnego obiektywu."
+        },
+        {
+          "name": "Silnik przetwarzania obrazu",
+          "value": "Photonic Engine, Deep Fusion, Inteligentny HDR 5",
+          "details": "Udoskonalone portrety z funkcją kontroli punktu i głębi ostrości po zrobieniu zdjęcia. Oświetlenie portretowe z 6 efektami."
+        },
+        {
+          "name": "Tryby i formaty",
+          "value": "Tryb Noc, Panorama (do 63 MP), Zdjęcia seryjne, Formaty HEIF i JPEG",
+          "details": "Korekcja obiektywu ultraszerokokątnego, redukcja czerwonych oczu i automatyczne dodawanie geoznaczników."
+        }
+      ]
+    },
+    {
+      "id": "wideo",
+      "title": "Nagrywanie wideo",
+      "category": "camera",
+      "icon": "Video",
+      "summary": "Kinowe 4K 120 kl./s Dolby Vision, tryb Akcja, podwójne nagrywanie i miks studyjny audio.",
+      "items": [
+        {
+          "name": "Wideo 4K Dolby Vision",
+          "value": "4K przy 24, 25, 30, 60, 100 lub 120 kl./s",
+          "details": "Kinowa jakość 120 kl./s na aparacie głównym Fusion z możliwością płynnego spowolnienia po nagraniu."
+        },
+        {
+          "name": "Wideo 1080p i 720p",
+          "value": "1080p przy 25, 30, 60 lub 120 kl./s • 720p przy 30 kl./s",
+          "details": "Lepsze wideo w słabym świetle w jakości 1080p."
+        },
+        {
+          "name": "Tryby kinowe i akcji",
+          "value": "Tryb Filmowe do 4K Dolby Vision 60 kl./s • Tryb Akcja do 2,8K 60 kl./s",
+          "details": "Efekty trybu Filmowe z płynną zmianą ostrości między postaciami. Duo Preview i inteligentne śledzenie."
+        },
+        {
+          "name": "Zwolnione tempo i poklatkowe",
+          "value": "Slow-motion 1080p do 240 kl./s oraz 4K Dolby Vision do 120 kl./s",
+          "details": "Wideo poklatkowe ze stabilizacją w jakości do 4K Dolby Vision, także w trybie Noc."
+        },
+        {
+          "name": "Nagrywanie dwoma aparatami",
+          "value": "Jednoczesna rejestracja z dwóch perspektyw do 4K Dolby Vision 30 kl./s",
+          "details": "Idealne do vlogowania, wywiadów i ujęć reakcji w czasie rzeczywistym."
+        },
+        {
+          "name": "Stabilizacja i zoom wideo",
+          "value": "System OIS ze stabilizacją matrycy • Do 6x zoom cyfrowy",
+          "details": "Wideo z ciągłym autofokusem, robienie zdjęć 8 MP podczas nagrywania wideo 4K, powiększanie podczas odtwarzania."
+        },
+        {
+          "name": "Rejestracja dźwięku",
+          "value": "Dźwięk przestrzenny i stereo, Miks audio, Redukcja szumu wiatru",
+          "details": "Studyjny układ mikrofonów z inteligentnym zoomem dźwięku podążającym za ruchem kamery."
+        }
+      ]
+    },
+    {
+      "id": "aparaty-przednie",
+      "title": "Aparaty przednie (Zewnętrzny i FaceTime UDC)",
+      "category": "camera",
+      "icon": "Eye",
+      "summary": "Center Stage 12 MP na zewnątrz i innowacyjny obiektyw ukryty pod matrycą 7,6″.",
+      "items": [
+        {
+          "name": "Zewnętrzny aparat przedni",
+          "value": "Aparat Center Stage 12 MP (przysłona ƒ/2,2)",
+          "details": "Retina Flash, Inteligentna migawka, Animacja dla dziecka przyciągająca wzrok maluchów, Style fotograficzne 3."
+        },
+        {
+          "name": "Wideo aparatu zewnętrznego",
+          "value": "Nagrywanie wideo 4K Dolby Vision do 60 kl./s, 1080p do 60 kl./s, Filmowe 4K 30 kl./s",
+          "details": "Zwolnione tempo 1080p 120 kl./s, QuickTake 4K 60 kl./s, ultrastabilizacja wideo i funkcja Centrum uwagi."
+        },
+        {
+          "name": "Wewnętrzny aparat FaceTime pod ekranem (UDC)",
+          "value": "Niewidoczna matryca zintegrowana pod ekranem OLED (przysłona ƒ/1,8)",
+          "details": "Zero wcięć i otworów na 7,6-calowym ekranie. Funkcja Centrum uwagi automatycznie utrzymuje Cię w kadrze."
+        },
+        {
+          "name": "Wideo aparatu FaceTime pod ekranem",
+          "value": "Nagrywanie 1080p przy 30 kl./s lub 60 kl./s z ultrastabilizacją",
+          "details": "Obsługa Animoji, Memoji, szeroka gama kolorów, automatyczna korekcja obiektywu i wideo QuickTake."
+        }
+      ]
+    },
+    {
+      "id": "bateria-zasilanie",
+      "title": "Zasilanie i bateria",
+      "category": "battery",
+      "icon": "BatteryCharging",
+      "summary": "Podwójne ogniwo litowo-jonowe, do 44 godzin wideo i superszybkie ładowanie USB-C 60 W.",
+      "items": [
+        {
+          "name": "Czas pracy przy typowym użytkowaniu",
+          "value": "Do 24 godzin",
+          "details": "Cały dzień i noc intensywnej pracy bez konieczności doładowywania."
+        },
+        {
+          "name": "Odtwarzanie wideo (ekran zewnętrzny)",
+          "value": "Do 44 godzin",
+          "details": "Energooszczędny panel 5,4 cala pozwala na bicie rekordów czasu seansów filmowych."
+        },
+        {
+          "name": "Odtwarzanie wideo (ekran wewnętrzny 7,6″)",
+          "value": "Do 31 godzin",
+          "details": "Niezwykły wynik jak na rozkładany wyświetlacz o powierzchni niemal tabletu."
+        },
+        {
+          "name": "Odtwarzanie wideo online (streaming)",
+          "value": "Do 37 godzin (ekran zewnętrzny) • Do 26 godzin (ekran wewnętrzny)",
+          "details": "Optymalizacja buforowania i dekodowania sprzętowego AV1."
+        },
+        {
+          "name": "Architektura baterii",
+          "value": "Dwie wbudowane baterie litowo‑jonowe",
+          "details": "Równomierne rozłożenie masy w obu skrzydłach obudowy połączonych przez zawias."
+        },
+        {
+          "name": "Szybkie ładowanie przewodowe USB-C",
+          "value": "Do 50% w około 20 minut",
+          "details": "Przy użyciu zasilacza o mocy 60 W lub wyższej z przewodem ładującym USB‑C (akcesoria sprzedawane oddzielnie)."
+        },
+        {
+          "name": "Ładowanie bezprzewodowe MagSafe / Qi2",
+          "value": "Moc do 25 W • Do 50% w około 30 minut",
+          "details": "Precyzyjny układ magnesów pozycjonujących, czytnik NFC do identyfikacji akcesoriów i magnetometr."
+        }
+      ]
+    },
+    {
+      "id": "lacznosc-sieci",
+      "title": "Sieci komórkowe i bezprzewodowe",
+      "category": "connectivity",
+      "icon": "Wifi",
+      "summary": "Modem Apple C2 5G z mmWave, czip Apple N1 Wi-Fi 7, Bluetooth 6 i Dual eSIM.",
+      "items": [
+        {
+          "name": "Model urządzenia",
+          "value": "Model A3720*",
+          "details": "Światowa kompatybilność z sieciami 5G NR sub-6 GHz oraz 5G NR mmWave (pasma n258, n260, n261)."
+        },
+        {
+          "name": "Modem komórkowy",
+          "value": "Modem Apple C2 5G & Gigabit LTE (4x4 MIMO)",
+          "details": "Autorski modem Apple o obniżonym poborze energii i błyskawicznym nawiązywaniu połączenia."
+        },
+        {
+          "name": "Wi-Fi i łączność bezprzewodowa",
+          "value": "Czip Apple N1 • Wi‑Fi 7 (802.11be, 2x2 MIMO) • Bluetooth 6",
+          "details": "Obsługa kanałów 320 MHz, transfery wielogigabitowe oraz protokół Thread dla urządzeń Smart Home."
+        },
+        {
+          "name": "Czip ultraszerokopasmowy (UWB)",
+          "value": "Apple UWB drugiej generacji",
+          "details": "Precyzyjne lokalizowanie urządzeń w aplikacji Znajdź z dokładnością do centymetrów."
+        },
+        {
+          "name": "Karta SIM",
+          "value": "Dual eSIM (dwie aktywne karty eSIM, pamięć ponad 8 profili)",
+          "details": "iPhone Duo nie posiada fizycznej szufladki SIM. Większe bezpieczeństwo i natychmiastowa aktywacja w podróży."
+        },
+        {
+          "name": "Lokalizacja",
+          "value": "Precyzyjny GPS o podwójnej częstotliwości (GPS, GLONASS, Galileo, QZSS, BeiDou, NavIC)",
+          "details": "Kompas cyfrowy, mikrolokalizacja iBeacon, łączność komórkowa i Wi-Fi."
+        },
+        {
+          "name": "NFC i Karty ekspresowe",
+          "value": "NFC z funkcją czytnika i trybem rezerwy energii",
+          "details": "Bilety komunikacji i klucze cyfrowe działają nawet po rozładowaniu urządzenia."
+        }
+      ]
+    },
+    {
+      "id": "przyciski-zlacza",
+      "title": "Przyciski, złącza i dźwięk",
+      "category": "ports",
+      "icon": "Sliders",
+      "summary": "Przycisk Sterowanie aparatem, port USB-C 10 Gb/s z DisplayPort 4K i głośniki stereo.",
+      "items": [
+        {
+          "name": "Sterowanie aparatem (Camera Control)",
+          "value": "Pojemnościowy panel dotykowy z haptyczną informacją zwrotną",
+          "details": "Płynna regulacja: Ekspozycja, Głębia ostrości, Zoom, Wybór aparatów, Style fotograficzne, Ton."
+        },
+        {
+          "name": "Port USB-C",
+          "value": "USB 3 (prędkość transferu do 10 Gb/s) oraz wyjście DisplayPort",
+          "details": "Bezpośrednie podłączanie zewnętrznych dysków SSD, monitorów 4K HDR i akcesoriów studyjnych."
+        },
+        {
+          "name": "Przyciski fizyczne",
+          "value": "Regulacja głośności, Przycisk boczny z czytnikiem Touch ID",
+          "details": "Błyskawiczne i bezpieczne odblokowywanie palcem w dowolnej pozycji urządzenia."
+        },
+        {
+          "name": "Dźwięk i mikrofony",
+          "value": "Wbudowane głośniki stereo, studyjny układ mikrofonów",
+          "details": "Dźwięk przestrzenny Dolby Atmos, izolacja głosu i szerokie spektrum w trakcie rozmów."
+        }
+      ]
+    },
+    {
+      "id": "bezpieczenstwo-czujniki",
+      "title": "Bezpieczeństwo i czujniki",
+      "category": "sensors",
+      "icon": "Fingerprint",
+      "summary": "Touch ID, Alarmowe SOS, Wykrywanie wypadków i zaawansowany zestaw 6 czujników.",
+      "items": [
+        {
+          "name": "Uwierzytelnianie biometryczne",
+          "value": "Czytnik linii papilarnych Touch ID w przycisku bocznym",
+          "details": "Bezpieczne zakupy z Apple Pay i logowanie do aplikacji bankowych jednym dotknięciem."
+        },
+        {
+          "name": "Funkcje bezpieczeństwa życia",
+          "value": "Alarmowe SOS, Wykrywanie poważnych wypadków samochodowych",
+          "details": "Automatyczne powiadamianie służb ratunkowych i kontaktów alarmowych w razie kolizji."
+        },
+        {
+          "name": "Zestaw czujników",
+          "value": "Barometr, Żyroskop z szerokim zakresem, Akcelerometr dużych przeciążeń",
+          "details": "Czujnik zbliżeniowy oraz 4 wielokierunkowe czujniki oświetlenia zewnętrznego dla perfekcyjnego True Tone."
+        }
+      ]
+    },
+    {
+      "id": "system-multimedia",
+      "title": "System operacyjny iOS 27 i ułatwienia dostępu",
+      "category": "software",
+      "icon": "Sparkles",
+      "summary": "iOS 27 zoptymalizowany pod kątem dwóch ekranów, prywatność bez kompromisów.",
+      "items": [
+        {
+          "name": "System operacyjny",
+          "value": "iOS 27",
+          "details": "Najbardziej osobisty i bezpieczny mobilny system operacyjny z funkcją płynnego przenoszenia aplikacji między ekranami."
+        },
+        {
+          "name": "Ochrona prywatności",
+          "value": "Kompleksowe szyfrowanie i ochrona danych od podstaw",
+          "details": "Brak śledzenia przez aplikacje bez Twojej zgody. iMessage i FaceTime stale szyfrowane metodą end-to-end."
+        },
+        {
+          "name": "Ułatwienia dostępu (Accessibility)",
+          "value": "VoiceOver, Zoom, Lupa, AssistiveTouch, Śledzenie oczu, Napisy na żywo",
+          "details": "Obsługa RTT/TTY, mowa na żywo, skróty głosowe i zaawansowana zawartość mówiona dla każdego użytkownika."
+        },
+        {
+          "name": "Wbudowane aplikacje Apple",
+          "value": "Kompletny zestaw ponad 35 profesjonalnych aplikacji Apple",
+          "details": "App Store, Aparat, Freeform, Zdrowie, iMovie, Keynote, Pages, Numbers, Notatki, Przypomnienia, Safari, Skróty, Mapy, Muzyka, Podcasty, Dziennik i wiele innych."
+        }
+      ]
+    }
+  ]
+}
