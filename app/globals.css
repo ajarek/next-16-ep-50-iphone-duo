@@ -6,28 +6,24 @@
     --foreground: #f8fafc;
   }
 
-  html.light {
-    --background: #f1f5f9;
-    --foreground: #0f172a;
-  }
-
-  html.dark {
-    --background: #020610;
-    --foreground: #f8fafc;
-  }
-
   body {
     background-color: var(--background);
     color: var(--foreground);
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family:
+      -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+      "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   /* Accessibility: Prefers reduced motion */
   @media (prefers-reduced-motion: reduce) {
-    *, ::before, ::after {
+    *,
+    ::before,
+    ::after {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
@@ -36,17 +32,39 @@
   }
 }
 
+/* Animacja wykorzystująca transform/opacity (composited layers) */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: scale(0.98);
+    transform: scale(0.98) translateZ(0);
   }
   to {
     opacity: 1;
-    transform: scale(1);
+    transform: scale(1) translateZ(0);
   }
 }
 
 .animate-fade-in {
   animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: opacity, transform;
+}
+
+/* Optymalizacja warstw poza viewport (elementy dekoracyjne) */
+@layer utilities {
+  .gpu-layer {
+    will-change: transform;
+    transform: translateZ(0);
+  }
+
+  .contain-paint {
+    contain: paint;
+  }
+
+  .contain-layout {
+    contain: layout;
+  }
+
+  .contain-strict {
+    contain: strict;
+  }
 }

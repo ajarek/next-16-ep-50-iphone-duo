@@ -1,7 +1,7 @@
-"use client";
+"use client"
 
-import React, { useState, useEffect, useRef, useCallback } from "react";
-import Image from "next/image";
+import React, { useState, useEffect, useRef, useCallback } from "react"
+import Image from "next/image"
 import {
   ChevronLeft,
   ChevronRight,
@@ -14,23 +14,23 @@ import {
   Sun,
   Gamepad2,
   CheckCircle2,
-} from "lucide-react";
+} from "lucide-react"
 
 interface GameSlide {
-  id: string;
-  title: string;
-  category: string;
-  image: string;
-  alt: string;
-  badge: string;
-  glowColor1: string;
-  glowColor2: string;
-  accentBorder: string;
-  description: string;
+  id: string
+  title: string
+  category: string
+  image: string
+  alt: string
+  badge: string
+  glowColor1: string
+  glowColor2: string
+  accentBorder: string
+  description: string
   specs: {
-    label: string;
-    value: string;
-  }[];
+    label: string
+    value: string
+  }[]
 }
 
 const slides: GameSlide[] = [
@@ -91,90 +91,92 @@ const slides: GameSlide[] = [
       { label: "FaceTime Camera", value: "Ukryty pod ekranem" },
     ],
   },
-];
+]
 
 export default function DisplayCarousel() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
-  const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [activeTabMode, setActiveTabMode] = useState<"standard" | "nanotexture" | "promotion">("nanotexture");
-  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [isPlaying, setIsPlaying] = useState(true)
+  const [lightboxOpen, setLightboxOpen] = useState(false)
+  const [activeTabMode, setActiveTabMode] = useState<
+    "standard" | "nanotexture" | "promotion"
+  >("nanotexture")
+  const [touchStartX, setTouchStartX] = useState<number | null>(null)
 
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
-  const activeSlide = slides[currentIndex];
+  const timerRef = useRef<NodeJS.Timeout | null>(null)
+  const activeSlide = slides[currentIndex]
 
   const nextSlide = useCallback(() => {
-    setCurrentIndex((prev) => (prev + 1) % slides.length);
-  }, []);
+    setCurrentIndex((prev) => (prev + 1) % slides.length)
+  }, [])
 
   const prevSlide = useCallback(() => {
-    setCurrentIndex((prev) => (prev - 1 + slides.length) % slides.length);
-  }, []);
+    setCurrentIndex((prev) => (prev - 1 + slides.length) % slides.length)
+  }, [])
 
   // Autoodtwarzanie karuzeli
   useEffect(() => {
     if (isPlaying) {
       timerRef.current = setInterval(() => {
-        nextSlide();
-      }, 5500);
+        nextSlide()
+      }, 5500)
     }
     return () => {
-      if (timerRef.current) clearInterval(timerRef.current);
-    };
-  }, [isPlaying, nextSlide]);
+      if (timerRef.current) clearInterval(timerRef.current)
+    }
+  }, [isPlaying, nextSlide])
 
   // Nawigacja klawiaturą
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "ArrowLeft") prevSlide();
-      if (e.key === "ArrowRight") nextSlide();
-      if (e.key === "Escape" && lightboxOpen) setLightboxOpen(false);
+      if (e.key === "ArrowLeft") prevSlide()
+      if (e.key === "ArrowRight") nextSlide()
+      if (e.key === "Escape" && lightboxOpen) setLightboxOpen(false)
       if (e.key === " " && !lightboxOpen) {
-        e.preventDefault();
-        setIsPlaying((p) => !p);
+        e.preventDefault()
+        setIsPlaying((p) => !p)
       }
-    };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [nextSlide, prevSlide, lightboxOpen]);
+    }
+    window.addEventListener("keydown", handleKeyDown)
+    return () => window.removeEventListener("keydown", handleKeyDown)
+  }, [nextSlide, prevSlide, lightboxOpen])
 
   // Obsługa gestów dotykowych (Swipe)
   const handleTouchStart = (e: React.TouchEvent) => {
-    setTouchStartX(e.touches[0].clientX);
-  };
+    setTouchStartX(e.touches[0].clientX)
+  }
 
   const handleTouchEnd = (e: React.TouchEvent) => {
-    if (touchStartX === null) return;
-    const touchEndX = e.changedTouches[0].clientX;
-    const diff = touchStartX - touchEndX;
+    if (touchStartX === null) return
+    const touchEndX = e.changedTouches[0].clientX
+    const diff = touchStartX - touchEndX
 
-    if (diff > 50) nextSlide();
-    else if (diff < -50) prevSlide();
+    if (diff > 50) nextSlide()
+    else if (diff < -50) prevSlide()
 
-    setTouchStartX(null);
-  };
+    setTouchStartX(null)
+  }
 
   return (
-    <div className="relative w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
+    <div className='relative w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16'>
       {/* Dynamiczne poświaty tła zsynchronizowane z wybraną grą */}
       <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10 transition-all duration-700 blur-3xl opacity-60"
+        aria-hidden='true'
+        className='pointer-events-none absolute inset-0 -z-10 transition-all duration-700 blur-3xl opacity-60'
         style={{
           background: `radial-gradient(circle at 50% 45%, ${activeSlide.glowColor1} 0%, ${activeSlide.glowColor2} 35%, transparent 70%)`,
         }}
       />
 
       {/* Przełącznik kategorii gier na górze */}
-      <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-8 sm:mb-12">
+      <div className='flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-8 sm:mb-12'>
         {slides.map((slide, index) => {
-          const isActive = index === currentIndex;
+          const isActive = index === currentIndex
           return (
             <button
               key={slide.id}
               onClick={() => {
-                setCurrentIndex(index);
-                setIsPlaying(false);
+                setCurrentIndex(index)
+                setIsPlaying(false)
               }}
               className={`group inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 border ${
                 isActive
@@ -183,45 +185,49 @@ export default function DisplayCarousel() {
               }`}
               aria-label={`Przejdź do slajdu: ${slide.title}`}
             >
-              <Gamepad2 className={`w-3.5 h-3.5 ${isActive ? "text-sky-300" : "text-slate-500"}`} />
+              <Gamepad2
+                className={`w-3.5 h-3.5 ${isActive ? "text-sky-300" : "text-slate-500"}`}
+              />
               <span>{slide.title.split(":")[0]}</span>
               {isActive && (
-                <span className="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse" />
+                <span className='w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse' />
               )}
             </button>
-          );
+          )
         })}
       </div>
 
       {/* Centralna scena z 3D Cover-Flow i obudową iPhone Duo */}
       <div
-        className="relative flex items-center justify-center min-h-[360px] sm:min-h-[480px] md:min-h-[540px] select-none"
+        className='relative flex items-center justify-center min-h-[360px] sm:min-h-[480px] md:min-h-[540px] select-none'
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
         {/* Lewy slajd podglądowy (Desktop) */}
         <button
           onClick={prevSlide}
-          aria-label="Poprzednia gra"
-          className="hidden lg:block absolute left-0 z-10 w-72 h-[380px] -translate-x-12 opacity-30 hover:opacity-75 transition-all duration-500 scale-90 blur-[1px] hover:blur-none cursor-pointer"
+          aria-label='Poprzednia gra'
+          className='hidden lg:block absolute left-0 z-10 w-72 h-[380px] -translate-x-12 opacity-30 hover:opacity-75 transition-all duration-500 scale-90 blur-[1px] hover:blur-none cursor-pointer'
         >
-          <div className="relative w-full h-full flex items-center justify-center">
+          <div className='relative w-full h-full flex items-center justify-center'>
             <Image
-              src={slides[(currentIndex - 1 + slides.length) % slides.length].image}
-              alt="Poprzednia gra"
+              src={
+                slides[(currentIndex - 1 + slides.length) % slides.length].image
+              }
+              alt='Poprzednia gra'
               fill
-              className="object-contain"
-              sizes="320px"
+              className='object-contain'
+              sizes='320px'
             />
           </div>
         </button>
 
         {/* Główny aktywny slajd */}
-        <div className="relative z-20 w-full max-w-[760px] group">
+        <div className='relative z-20 w-full max-w-[760px] group'>
           {/* Subtelny cień i odbicie pod urządzeniem */}
           <div
-            aria-hidden="true"
-            className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-3/4 h-12 bg-sky-500/20 blur-2xl rounded-full pointer-events-none transition-all duration-500 group-hover:bg-sky-400/30"
+            aria-hidden='true'
+            className='absolute -bottom-8 left-1/2 -translate-x-1/2 w-3/4 h-12 bg-sky-500/20 blur-2xl rounded-full pointer-events-none transition-all duration-500 group-hover:bg-sky-400/30'
           />
 
           {/* Ramka ekranu z nanostrukturą */}
@@ -234,36 +240,36 @@ export default function DisplayCarousel() {
                 activeTabMode === "nanotexture"
                   ? "contrast-105 saturate-110"
                   : activeTabMode === "promotion"
-                  ? "brightness-105"
-                  : ""
+                    ? "brightness-105"
+                    : ""
               }`}
             >
               {/* Główny obraz iPhone Duo z grą */}
-              <div className="relative w-full aspect-3/2 max-h-[500px]">
+              <div className='relative w-full aspect-3/2 max-h-[500px]'>
                 <Image
                   src={activeSlide.image}
                   alt={activeSlide.alt}
                   fill
                   priority
-                  className="object-contain transition-transform duration-700 ease-out group-hover:scale-[1.02]"
-                  sizes="(max-width: 768px) 100vw, 760px"
+                  className='object-contain transition-transform duration-700 ease-out group-hover:scale-[1.02]'
+                  sizes='(max-width: 768px) 100vw, 760px'
                 />
 
                 {/* Znacznik ukrytego FaceTime'a na górnej krawędzi */}
                 <div
-                  title="Ukryty aparat FaceTime pod pikselami wyświetlacza"
-                  className="absolute top-2.5 sm:top-3.5 left-1/2 -translate-x-1/2 flex items-center gap-1 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md border border-white/10 opacity-40 hover:opacity-100 transition-opacity cursor-help"
+                  title='Ukryty aparat FaceTime pod pikselami wyświetlacza'
+                  className='absolute top-2.5 sm:top-3.5 left-1/2 -translate-x-1/2 flex items-center gap-1 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md border border-white/10 opacity-40 hover:opacity-100 transition-opacity cursor-help'
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400/80" />
-                  <span className="text-[10px] text-slate-300 font-mono tracking-wider">
+                  <span className='w-1.5 h-1.5 rounded-full bg-emerald-400/80' />
+                  <span className='text-[10px] text-slate-300 font-mono tracking-wider'>
                     FaceTime UDC
                   </span>
                 </div>
 
                 {/* Odznaka technologiczna w prawym górnym rogu */}
-                <div className="absolute top-3 right-3 sm:top-5 sm:right-5">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] sm:text-xs font-semibold bg-slate-950/80 text-sky-300 border border-sky-400/30 backdrop-blur-md shadow-lg">
-                    <Sparkles className="w-3 h-3 text-sky-400 animate-pulse" />
+                <div className='absolute top-3 right-3 sm:top-5 sm:right-5'>
+                  <span className='inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] sm:text-xs font-semibold bg-slate-950/80 text-sky-300 border border-sky-400/30 backdrop-blur-md shadow-lg'>
+                    <Sparkles className='w-3 h-3 text-sky-400 animate-pulse' />
                     {activeSlide.badge}
                   </span>
                 </div>
@@ -271,11 +277,11 @@ export default function DisplayCarousel() {
                 {/* Przycisk powiększenia / pełnego widoku w lewym dolnym rogu */}
                 <button
                   onClick={() => setLightboxOpen(true)}
-                  className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 p-2 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-300 hover:text-white border border-white/10 backdrop-blur-md transition-all active:scale-95 shadow-md"
-                  aria-label="Powiększ widok ekranu"
-                  title="Powiększ widok ekranu"
+                  className='absolute bottom-3 left-3 sm:bottom-4 sm:left-4 p-2 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-300 hover:text-white border border-white/10 backdrop-blur-md transition-all active:scale-95 shadow-md'
+                  aria-label='Powiększ widok ekranu'
+                  title='Powiększ widok ekranu'
                 >
-                  <Maximize2 className="w-4 h-4" />
+                  <Maximize2 className='w-4 h-4' />
                 </button>
               </div>
             </div>
@@ -285,63 +291,71 @@ export default function DisplayCarousel() {
         {/* Prawy slajd podglądowy (Desktop) */}
         <button
           onClick={nextSlide}
-          aria-label="Następna gra"
-          className="hidden lg:block absolute right-0 z-10 w-72 h-[380px] translate-x-12 opacity-30 hover:opacity-75 transition-all duration-500 scale-90 blur-[1px] hover:blur-none cursor-pointer"
+          aria-label='Następna gra'
+          className='hidden lg:block absolute right-0 z-10 w-72 h-[380px] translate-x-12 opacity-30 hover:opacity-75 transition-all duration-500 scale-90 blur-[1px] hover:blur-none cursor-pointer'
         >
-          <div className="relative w-full h-full flex items-center justify-center">
+          <div className='relative w-full h-full flex items-center justify-center'>
             <Image
               src={slides[(currentIndex + 1) % slides.length].image}
-              alt="Następna gra"
+              alt='Następna gra'
               fill
-              className="object-contain"
-              sizes="320px"
+              className='object-contain'
+              sizes='320px'
             />
           </div>
         </button>
       </div>
 
       {/* Pasek sterowania: Strzałki, Play/Pause, Wskaźniki postępu */}
-      <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 p-4 rounded-2xl bg-slate-900/50 dark:bg-slate-900/80 border border-white/10 backdrop-blur-xl">
+      <div className='mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 p-4 rounded-2xl bg-slate-900/50 dark:bg-slate-900/80 border border-white/10 backdrop-blur-xl'>
         {/* Lewe przyciski nawigacyjne */}
-        <div className="flex items-center gap-2">
+        <div className='flex items-center gap-2'>
           <button
             onClick={prevSlide}
-            aria-label="Poprzedni slajd"
-            className="p-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition-all active:scale-95"
+            aria-label='Poprzedni slajd'
+            className='p-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition-all active:scale-95'
           >
-            <ChevronLeft className="w-5 h-5" />
+            <ChevronLeft className='w-5 h-5' />
           </button>
 
           <button
             onClick={() => setIsPlaying((p) => !p)}
-            aria-label={isPlaying ? "Wstrzymaj autoodtwarzanie" : "Uruchom autoodtwarzanie"}
-            className="p-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition-all active:scale-95"
+            aria-label={
+              isPlaying
+                ? "Wstrzymaj autoodtwarzanie"
+                : "Uruchom autoodtwarzanie"
+            }
+            className='p-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition-all active:scale-95'
             title={isPlaying ? "Wstrzymaj pokaz" : "Wznów pokaz"}
           >
-            {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
+            {isPlaying ? (
+              <Pause className='w-5 h-5' />
+            ) : (
+              <Play className='w-5 h-5' />
+            )}
           </button>
 
           <button
             onClick={nextSlide}
-            aria-label="Następny slajd"
-            className="p-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition-all active:scale-95"
+            aria-label='Następny slajd'
+            className='p-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition-all active:scale-95'
           >
-            <ChevronRight className="w-5 h-5" />
+            <ChevronRight className='w-5 h-5' />
           </button>
 
-          <div className="ml-2 text-xs text-slate-400 font-mono">
+          <div className='ml-2 text-xs text-slate-400 font-mono'>
             {currentIndex + 1} / {slides.length}
           </div>
         </div>
 
         {/* Wskaźniki kropek slajdów */}
-        <div className="flex items-center gap-2">
+        <div className='flex items-center gap-2'>
           {slides.map((_, idx) => (
             <button
               key={idx}
               onClick={() => {
-                setCurrentIndex(idx);
-                setIsPlaying(false);
+                setCurrentIndex(idx)
+                setIsPlaying(false)
               }}
               aria-label={`Przejdź do gry numer ${idx + 1}`}
               className={`h-2 rounded-full transition-all duration-300 ${
@@ -354,7 +368,7 @@ export default function DisplayCarousel() {
         </div>
 
         {/* Tryby symulatora wyświetlacza */}
-        <div className="flex items-center gap-1.5 bg-slate-950/60 p-1 rounded-xl border border-white/10 text-xs">
+        <div className='flex items-center gap-1.5 bg-slate-950/60 p-1 rounded-xl border border-white/10 text-xs'>
           <button
             onClick={() => setActiveTabMode("standard")}
             className={`px-2.5 py-1 rounded-lg transition-colors ${
@@ -373,7 +387,7 @@ export default function DisplayCarousel() {
                 : "text-slate-400 hover:text-slate-200"
             }`}
           >
-            <Sun className="w-3 h-3 text-amber-400" />
+            <Sun className='w-3 h-3 text-amber-400' />
             Nanostruktura
           </button>
           <button
@@ -384,47 +398,49 @@ export default function DisplayCarousel() {
                 : "text-slate-400 hover:text-slate-200"
             }`}
           >
-            <Zap className="w-3 h-3 text-sky-400" />
+            <Zap className='w-3 h-3 text-sky-400' />
             ProMotion 120Hz
           </button>
         </div>
       </div>
 
       {/* Karta informacyjna o aktualnie prezentowanej grze i parametrach */}
-      <div className="mt-8 p-6 sm:p-8 rounded-3xl bg-slate-900/40 dark:bg-slate-900/70 border border-white/10 backdrop-blur-xl">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+      <div className='mt-8 p-6 sm:p-8 rounded-3xl bg-slate-900/40 dark:bg-slate-900/70 border border-white/10 backdrop-blur-xl'>
+        <div className='grid grid-cols-1 lg:grid-cols-12 gap-6 items-center'>
           {/* Opis lewy */}
-          <div className="lg:col-span-7 space-y-3">
-            <div className="flex items-center gap-2">
-              <span className="text-xs uppercase font-semibold tracking-wider text-sky-400">
+          <div className='lg:col-span-7 space-y-3'>
+            <div className='flex items-center gap-2'>
+              <span className='text-xs uppercase font-semibold tracking-wider text-sky-400'>
                 {activeSlide.category}
               </span>
-              <span className="text-slate-500">•</span>
-              <span className="text-xs text-slate-400">Ekran 7,6″ OLED Super Retina XDR</span>
+              <span className='text-slate-500'>•</span>
+              <span className='text-xs text-slate-400'>
+                Ekran 7,6″ OLED Super Retina XDR
+              </span>
             </div>
 
-            <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-white">
+            <h3 className='text-2xl sm:text-3xl font-bold tracking-tight text-white'>
               {activeSlide.title}
             </h3>
 
-            <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
+            <p className='text-sm sm:text-base text-slate-300 leading-relaxed'>
               {activeSlide.description}
             </p>
           </div>
 
           {/* Mini-siatka parametrów prawy */}
-          <div className="lg:col-span-5 grid grid-cols-2 gap-3">
+          <div className='lg:col-span-5 grid grid-cols-2 gap-3'>
             {activeSlide.specs.map((spec, sIdx) => (
               <div
                 key={sIdx}
-                className="p-3.5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md"
+                className='p-3.5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md'
               >
-                <div className="text-[11px] text-slate-400 font-medium">
+                <div className='text-[11px] text-slate-400 font-medium'>
                   {spec.label}
                 </div>
-                <div className="mt-1 text-sm sm:text-base font-semibold text-slate-100 flex items-center gap-1.5">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-sky-400 shrink-0" />
-                  <span className="truncate">{spec.value}</span>
+                <div className='mt-1 text-sm sm:text-base font-semibold text-slate-100 flex items-center gap-1.5'>
+                  <CheckCircle2 className='w-3.5 h-3.5 text-sky-400 shrink-0' />
+                  <span className='truncate'>{spec.value}</span>
                 </div>
               </div>
             ))}
@@ -435,46 +451,49 @@ export default function DisplayCarousel() {
       {/* Modal Lightbox pełnego powiększenia ekranu */}
       {lightboxOpen && (
         <div
-          role="dialog"
-          aria-modal="true"
-          aria-label="Podgląd pełnoekranowy gry na iPhone Duo"
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/90 backdrop-blur-2xl"
+          role='dialog'
+          aria-modal='true'
+          aria-label='Podgląd pełnoekranowy gry na iPhone Duo'
+          className='fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/90 backdrop-blur-2xl'
           onClick={() => setLightboxOpen(false)}
         >
           <div
-            className="relative max-w-5xl w-full flex flex-col items-center"
+            className='relative max-w-5xl w-full flex flex-col items-center'
             onClick={(e) => e.stopPropagation()}
           >
             {/* Przycisk zamknięcia */}
             <button
               onClick={() => setLightboxOpen(false)}
-              className="absolute -top-12 right-0 sm:right-2 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
-              aria-label="Zamknij podgląd"
+              className='absolute -top-12 right-0 sm:right-2 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors'
+              aria-label='Zamknij podgląd'
             >
-              <X className="w-6 h-6" />
+              <X className='w-6 h-6' />
             </button>
 
             {/* Obraz w dużej rozdzielczości */}
-            <div className="relative w-full aspect-3/2 max-h-[80vh] rounded-3xl overflow-hidden border border-white/20 shadow-2xl bg-black">
+            <div className='relative w-full aspect-3/2 max-h-[80vh] rounded-3xl overflow-hidden border border-white/20 shadow-2xl bg-black'>
               <Image
                 src={activeSlide.image}
                 alt={activeSlide.alt}
                 fill
-                className="object-contain"
-                sizes="(max-width: 1200px) 100vw, 1200px"
+                className='object-contain'
+                sizes='(max-width: 1200px) 100vw, 1200px'
               />
             </div>
 
             {/* Podpis pod obrazem */}
-            <div className="mt-4 text-center">
-              <h4 className="text-lg font-semibold text-white">{activeSlide.title}</h4>
-              <p className="text-xs text-slate-400 mt-1">
-                7,6-calowy składany wyświetlacz Super Retina XDR z powłoką nanostrukturalną
+            <div className='mt-4 text-center'>
+              <h4 className='text-lg font-semibold text-white'>
+                {activeSlide.title}
+              </h4>
+              <p className='text-xs text-slate-400 mt-1'>
+                7,6-calowy składany wyświetlacz Super Retina XDR z powłoką
+                nanostrukturalną
               </p>
             </div>
           </div>
         </div>
       )}
     </div>
-  );
+  )
 }

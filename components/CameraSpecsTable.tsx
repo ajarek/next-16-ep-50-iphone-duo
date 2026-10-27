@@ -1,4 +1,3 @@
-import React from "react"
 import Link from "next/link"
 import AppleLogo from "./AppleLogo"
 import { ChevronRight, Sparkles } from "lucide-react"

@@ -1,4 +1,3 @@
-import React from "react"
 import type { Metadata } from "next"
 import SpotlightEffect from "@/components/SpotlightEffect"
 import SpecificationHero from "@/components/SpecificationHero"
@@ -41,21 +40,21 @@ export const metadata: Metadata = {
 
 export default function SpecificationPage() {
   return (
-    <div className="relative isolate min-h-screen overflow-x-hidden bg-[#020610] text-slate-100">
+    <div className='relative isolate min-h-screen overflow-x-hidden bg-[#020610] text-slate-100'>
       {/* Subtelny ambient spotlight podążający za ruchem */}
       <SpotlightEffect />
 
       {/* Tło gradientowe i teatralne refleksy świetlne */}
       <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,rgba(56,189,248,0.18),transparent_50%),radial-gradient(ellipse_at_80%_35%,rgba(99,102,241,0.14),transparent_45%),radial-gradient(ellipse_at_20%_80%,rgba(14,165,233,0.12),transparent_48%)]"
+        aria-hidden='true'
+        className='pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,rgba(56,189,248,0.18),transparent_50%),radial-gradient(ellipse_at_80%_35%,rgba(99,102,241,0.14),transparent_45%),radial-gradient(ellipse_at_20%_80%,rgba(14,165,233,0.12),transparent_48%)]'
       />
       <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(180deg,#020610_0%,#051124_45%,#020610_100%)] opacity-95"
+        aria-hidden='true'
+        className='pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(180deg,#020610_0%,#051124_45%,#020610_100%)] opacity-95'
       />
 
-      <main className="flex flex-col">
+      <main className='flex flex-col'>
         {/* Sekcja Hero z prezentacją obrazu /images/specyfikacja.png, interaktywnymi punktami i wymiarami */}
         <SpecificationHero />
 

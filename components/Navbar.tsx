@@ -1,9 +1,8 @@
 "use client"
 
-import React, { useState, useEffect } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Menu, X, ChevronRight, ShoppingBag, Sparkles } from "lucide-react"
-import ThemeToggle from "./ThemeToggle"
 import OrderModal from "./OrderModal"
 
 import AppleLogo from "./AppleLogo"
@@ -93,11 +92,8 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Prawa strona: CTA i Przełącznik motywu */}
+          {/* Prawa strona: CTA */}
           <div className='flex items-center gap-3'>
-            {/* Przełącznik motywu w Navbarze */}
-            <ThemeToggle variant='navbar' />
-
             {/* Wezwanie do działania CTA */}
             <button
               onClick={() => setOrderModalOpen(true)}
@@ -172,10 +168,8 @@ export default function Navbar() {
             </nav>
           </div>
 
-          {/* Dolne elementy menu: Przełącznik motywu + CTA */}
+          {/* Dolne elementy menu: CTA */}
           <div className='pt-6 border-t border-white/10 space-y-3'>
-            <ThemeToggle variant='mobile' />
-
             <button
               onClick={() => {
                 setMobileMenuOpen(false)

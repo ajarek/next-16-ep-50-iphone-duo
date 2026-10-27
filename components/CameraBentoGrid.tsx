@@ -1,12 +1,4 @@
-import React from "react";
-import {
-  Sparkles,
-  Users,
-  Mic,
-  Cpu,
-  ShieldCheck,
-  Zap,
-} from "lucide-react";
+import { Sparkles, Users, Mic, Cpu, ShieldCheck, Zap } from "lucide-react"
 
 export default function CameraBentoGrid() {
   const bentoItems = [
@@ -60,30 +52,30 @@ export default function CameraBentoGrid() {
       gradient: "from-slate-500/20 via-slate-700/10 to-transparent",
       colSpan: "lg:col-span-4",
     },
-  ];
+  ]
 
   return (
-    <section className="relative py-16 sm:py-24 overflow-hidden">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className='relative py-16 sm:py-24 overflow-hidden'>
+      <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         {/* Nagłówek sekcji */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-400/20 text-sky-400 text-xs font-semibold uppercase tracking-wider mb-3">
-            <Sparkles className="w-3.5 h-3.5" />
+        <div className='text-center max-w-3xl mx-auto mb-12 sm:mb-16'>
+          <div className='inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-400/20 text-sky-400 text-xs font-semibold uppercase tracking-wider mb-3'>
+            <Sparkles className='w-3.5 h-3.5' />
             <span>Zaawansowane technologie</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
+          <h2 className='text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight'>
             Rewolucja w każdym detalu konstrukcji
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-300 font-light">
+          <p className='mt-4 text-base sm:text-lg text-slate-300 font-light'>
             Innowacje sprzętowe i potężne algorytmy uczenia maszynowego
             połączone w jeden bezkompromisowy ekosystem.
           </p>
         </div>
 
         {/* Siatka Bento */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6'>
           {bentoItems.map((item) => {
-            const Icon = item.icon;
+            const Icon = item.icon
             return (
               <div
                 key={item.title}
@@ -91,35 +83,35 @@ export default function CameraBentoGrid() {
               >
                 {/* Tło gradientowe karty */}
                 <div
-                  aria-hidden="true"
+                  aria-hidden='true'
                   className={`pointer-events-none absolute inset-0 bg-linear-to-br ${item.gradient} opacity-50 group-hover:opacity-80 transition-opacity`}
                 />
 
-                <div className="relative z-10">
-                  <div className="flex items-center justify-between gap-4 mb-6">
-                    <div className="w-10 h-10 rounded-2xl bg-sky-500/10 border border-sky-400/20 flex items-center justify-center text-sky-400 group-hover:scale-110 transition-transform">
-                      <Icon className="w-5 h-5" />
+                <div className='relative z-10'>
+                  <div className='flex items-center justify-between gap-4 mb-6'>
+                    <div className='w-10 h-10 rounded-2xl bg-sky-500/10 border border-sky-400/20 flex items-center justify-center text-sky-400 group-hover:scale-110 transition-transform'>
+                      <Icon className='w-5 h-5' />
                     </div>
-                    <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] font-mono font-medium text-slate-300">
+                    <span className='px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] font-mono font-medium text-slate-300'>
                       {item.badge}
                     </span>
                   </div>
 
-                  <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+                  <h3 className='text-xl sm:text-2xl font-bold text-white tracking-tight'>
                     {item.title}
                   </h3>
-                  <p className="text-sm font-medium text-sky-300/90 mt-1">
+                  <p className='text-sm font-medium text-sky-300/90 mt-1'>
                     {item.subtitle}
                   </p>
-                  <p className="mt-4 text-sm text-slate-300 leading-relaxed font-light">
+                  <p className='mt-4 text-sm text-slate-300 leading-relaxed font-light'>
                     {item.description}
                   </p>
                 </div>
               </div>
-            );
+            )
           })}
         </div>
       </div>
     </section>
-  );
+  )
 }

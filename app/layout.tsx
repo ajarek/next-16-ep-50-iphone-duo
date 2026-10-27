@@ -1,19 +1,17 @@
-import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import Navbar from "@/components/Navbar";
-import { ThemeProvider } from "@/components/ThemeProvider";
-import ThemeToggle from "@/components/ThemeToggle";
+import type { Metadata, Viewport } from "next"
+import { Geist, Geist_Mono } from "next/font/google"
+import "./globals.css"
+import Navbar from "@/components/Navbar"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
-});
+})
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-});
+})
 
 export const metadata: Metadata = {
   title: "iPhone Duo — Nowy wymiar iPhone | Apple (Polska)",
@@ -31,7 +29,8 @@ export const metadata: Metadata = {
   authors: [{ name: "Apple Inc." }],
   openGraph: {
     title: "iPhone Duo — Nowy wymiar iPhone",
-    description: "Złóż. Otwórz. Odkryj więcej. Największy wyświetlacz iPhone. Teraz w Twojej kieszeni.",
+    description:
+      "Złóż. Otwórz. Odkryj więcej. Największy wyświetlacz iPhone. Teraz w Twojej kieszeni.",
     url: "https://www.apple.com/pl/iphone-duo",
     siteName: "Apple (Polska)",
     images: [
@@ -45,35 +44,34 @@ export const metadata: Metadata = {
     locale: "pl_PL",
     type: "website",
   },
-};
+}
 
 export const viewport: Viewport = {
   themeColor: "#020610",
   width: "device-width",
   initialScale: 1,
-};
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
-    <html lang="pl" className="dark h-full antialiased" suppressHydrationWarning>
+    <html
+      lang='pl'
+      className='dark h-full antialiased'
+      suppressHydrationWarning
+    >
       <body
         className={`${geistSans.variable} ${geistMono.variable} min-h-full flex flex-col bg-[#020610] text-slate-100 selection:bg-sky-500/30 selection:text-white`}
       >
-        <ThemeProvider>
-          {/* Główny komponent Navbar na wszystkich podstronach */}
-          <Navbar />
+        {/* Główny komponent Navbar na wszystkich podstronach */}
+        <Navbar />
 
-          {/* Główna zawartość strony */}
-          <main className="flex-1 flex flex-col">{children}</main>
-
-          {/* Dedykowany przycisk przełączania motywu w prawym dolnym rogu */}
-          <ThemeToggle variant="floating" />
-        </ThemeProvider>
+        {/* Główna zawartość strony */}
+        <main className='flex-1 flex flex-col'>{children}</main>
       </body>
     </html>
-  );
+  )
 }
